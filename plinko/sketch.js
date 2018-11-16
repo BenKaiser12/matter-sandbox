@@ -5,21 +5,22 @@ var Engine = Matter.Engine,
 
 var engine;
 var world;
-var rows = 12;
+var rows = 13;
 var cols = 10;
 var chips = [];
 var pegBoard = [];
 
 function setup() {
-  createCanvas(500, 900);
+  createCanvas(500, 750);
   engine = Engine.create();
   world = engine.world;
+  // world.gravity.y = 1.25;
 
   // Create Grid
-  var spacingx = (width / cols) * 0.78;
-  var spacingy = 0.925 * spacingx;
+  var spacingx = (width / cols) * 0.825;
+  var spacingy = 0.93 * spacingx;
   for (var j = 0; j < rows; j++) {
-    for (var i = 0; i < cols - 1; i++) {
+    for (var i = 0; i < cols + 1; i++) {
       if (j % 2 === 0) {
         var x = (1 + i) * spacingx;
         var y = 3 * spacingx + j * spacingy;
@@ -33,11 +34,15 @@ function setup() {
       }
     }
   }
+
+  var bndy = new Boundary(width / 2, height + 50, width, 100);
 }
 
 function mouseClicked() {
-  var chip = new Chip(250, 0, 12.25);
-  chips.push(chip);
+  if (mouseY < 150) {
+    var chip = new Chip(mouseX, 75, 12.25);
+    chips.push(chip);
+  }
 }
 
 function newChip() {
