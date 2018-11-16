@@ -1,6 +1,7 @@
 function Chip(x, y, r) {
   var options = {
-    friction: 0
+    friction: 0.0225,
+    restitution: 0.725
   };
   this.body = Bodies.circle(x, y, r, options);
   this.r = r;
