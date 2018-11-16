@@ -1,0 +1,24 @@
+{
+  "name": "matter-sandbox",
+  "version": "1.0.0",
+  "description": "Sandbox fun with matter JS in P5",
+  "main": "index.js",
+  "dependencies": {
+    "p5": "^0.7.2",
+    "matter-js": "^0.14.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BenKaiser12/matter-sandbox.git"
+  },
+  "author": "Ben Kaiser",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BenKaiser12/matter-sandbox/issues"
+  },
+  "homepage": "https://github.com/BenKaiser12/matter-sandbox#readme"
+}
